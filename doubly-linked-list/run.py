@@ -20,33 +20,41 @@ while w_iterator > 6 and terminator == False :
     if option == 1:
         item = raw_input("enter the item to be inserted \n")
         obj.insert_head(item)
+        print "-----------------------------------------"
 
     elif option == 2:
         item = raw_input("enter the item to be inserted \n")
         obj.insert_tail(item)
+        print "-----------------------------------------"
 
     elif option == 3:
         item = obj.remove_head()
         print "removed head - "+str(item)
+        print "----------------------------------------"
 
     elif option == 4:
         item = obj.remove_tail()
         print "removed tail - "+str(item)
+        print "----------------------------------------"
 
     elif option == 5:
-        index = raw_input("enter the index where item should be inserted")
-        obj.insert_to_index(index)
-        print "item inserted at index - "+str(index)
+        index = raw_input("enter the index (starts from zero) where item should be inserted \n")
+        data = raw_input("What you wanna insert? \n")
+        obj.insert_to_index(index , data)
+        print "----------------------------------------"
 
     elif option == 6:
-        index = raw_input("enter the index from which item should be removed")
+        index = raw_input("enter the index (starts from zero) from which item should be removed \n")
         item  = obj.remove_from_index(index)
         print "item removed - "+item
+        print "----------------------------------------"
 
     elif option == 7:
         s_list = obj.get_list()
         print s_list
+        print "----------------------------------------"
 
     elif option == 0:
         print "programme is terminated"
+        print "----------------------------------------"
         terminator = True
