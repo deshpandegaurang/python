@@ -14,7 +14,7 @@ class Singly:
         else:
             node_obj = Node(item)
             node_obj.next = self.head
-            self.head = node_obj
+            self.my_list.next = self.head = node_obj
 
     def delete_item(self , item):
         if self.is_empty(self.head):

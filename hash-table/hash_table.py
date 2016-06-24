@@ -20,8 +20,8 @@ class HashTable:
         index = hash_function(self.length , item)
         target = self.my_hash_table[index]
         if target == None:
-            return 'Nothing to delete here'
-        elif target.next == None:
+            return 'Nothing to deletepyto here'
+        elif target.next.next == None:
             self.my_hash_table[index] = None
             return item
         else:
